@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Twoje zdjęcia{% endblock %}
+
+{% block content %}
+<div class="gallery-container">
+    <h2>Twoje zaakceptowane zdjęcia</h2>
+    {% if images %}
+        <div class="gallery">
+            {% for image in images %}
+                <div class="gallery-item">
+                    <img src="{{ image.url }}" alt="Uploaded image" 
+                         data-src="{{ image.url }}" class="lazy">
+                    <div class="image-info">
+                        <p>Dodano: {{ image.upload_date.strftime('%Y-%m-%d %H:%M') }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p class="no-images">Nie masz jeszcze żadnych zaakceptowanych zdjęć.</p>
+    {% endif %}
+</div>
+{% endblock %}

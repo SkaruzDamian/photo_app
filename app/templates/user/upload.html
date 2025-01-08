@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Wrzuć zdjęcie{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2>Wrzuć zdjęcie</h2>
+    <form id="upload-form" method="POST" action="{{ url_for('user.upload') }}" 
+          enctype="multipart/form-data" onsubmit="return validateImageUpload()">
+        <div class="form-group">
+            <label for="image-input">Wybierz zdjęcie:</label>
+            <input type="file" id="image-input" name="image" accept="image/*" 
+                   onchange="previewImage(this)" required>
+        </div>
+        <div class="form-group">
+            <img id="image-preview" style="display: none; max-width: 100%; margin-top: 10px;">
+        </div>
+        <button type="submit" class="btn">Wyślij</button>
+    </form>
+    <div class="loader" style="display: none;"></div>
+</div>
+{% endblock %}
