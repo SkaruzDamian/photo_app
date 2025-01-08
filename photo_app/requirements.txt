@@ -1,0 +1,28 @@
+# Flask i rozszerzenia
+Flask==2.3.3
+Flask-Login==0.6.2
+Flask-SQLAlchemy==3.1.1
+Werkzeug==2.3.7
+python-dotenv==1.0.0
+gunicorn==21.2.0
+
+# Azure
+azure-storage-blob==12.18.2
+azure-servicebus==7.11.3
+azure-identity==1.14.0
+
+# Baza danych
+pyodbc==4.0.39
+SQLAlchemy==2.0.21
+
+# Obsługa obrazów
+Pillow==10.0.1
+
+# Bezpieczeństwo
+Flask-WTF==1.1.1
+email-validator==2.0.0.post2
+
+# Narzędzia
+python-dateutil==2.8.2
+requests==2.31.0
+urllib3==2.0.4
